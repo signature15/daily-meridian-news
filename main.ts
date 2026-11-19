@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 /**
  * daily-meridian-news — entrypoint for make.fun's news-image contest.
  *
@@ -23,8 +24,6 @@
  */
 
 import { copyFileSync } from "node:fs";
-import { join } from "node:path";
-
 const source = new URL("./entry.png", import.meta.url);
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 
