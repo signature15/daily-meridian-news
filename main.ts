@@ -4,7 +4,8 @@
  * WHAT IT DOES
  *   Copies this repository's rendered poster image, `entry.png`, to the
  *   grader's output directory under the same name. The artwork itself — a
- *   front-page layout of the world's news of Tuesday 17 November 2026 — is a
+ *   front-page layout of the world's news for Wednesday 18 November 2026,
+ *   featuring a masthead, time bands, stat cards, and evening briefs — is a
  *   static PNG committed to the repo, so the entry's entire job at grading
  *   time is to place that exact file where the contest harness expects it.
  *
