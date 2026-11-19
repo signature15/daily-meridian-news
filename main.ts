@@ -1,41 +1,25 @@
 /**
  * daily-meridian-news — entrypoint for make.fun's news-image contest.
  *
- * WHAT IT DOES
- *   Copies this repository's rendered poster image, `entry.png`, to the
- *   grader's output directory under the same name. The artwork itself — a
- *   front-page layout of the world's news for Wednesday 18 November 2026,
- *   featuring a masthead, time bands, stat cards, and evening briefs — is a
- *   static PNG committed to the repo, so the entry's entire job at grading
- *   time is to place that exact file where the contest harness expects it.
+ * THE PAGE
+ *   `entry.png` is the front page of a one-day world newspaper for
+ *   Wednesday 18 November 2026, printed on a warm cream sheet. Its stories
+ *   sit in dark navy cards, numbered 1-40 and credited to their wires, and
+ *   seven color-coded region bands — Asia, Americas, Europe, Africa, Middle
+ *   East, World and Ukraine — sort the day's news by where it happened. A
+ *   "day in numbers" strip runs beneath the masthead with the figures that
+ *   define the date, from drones fired at Ukraine to Voyager 1's distance.
+ *   Lower down, a two-column city list sweeps through the rest of the day,
+ *   and a date-check footer notes the source, the cut-off and the rule that
+ *   everything on the page happened on or was first reported that Wednesday.
  *
- * DETERMINISM
- *   Two runs write identical bytes. The output is a straight byte-for-byte
- *   transfer of a file that never changes between runs: no clock, no RNG,
- *   no locale, no environment-dependent content ever enters the pipeline, so
- *   any two runs — on any machine, in any order — produce the same size and
- *   the same hash.
- *
- * WHY NO NETWORK
- *   Nothing is fetched, resolved or streamed. The image ships inside the
- *   repository and the only imports are `node:fs` and `node:path`, both from
- *   the Node standard library, so the program runs with networking disabled
- *   and needs zero installs — there are no dependencies to download.
- *
- * OUTPUT LOCATION
- *   Inside the grading container the destination directory is fixed at
- *   `/output`. Outside it, the `MAKEFUN_OUTPUT_DIR` environment variable
- *   names the output directory instead, so the same script runs unchanged on
- *   a local machine for inspection:
- *
- *     MAKEFUN_OUTPUT_DIR=./out node main.ts
- *
- * PORTABILITY
- *   The source is resolved against `import.meta.url` rather than the current
- *   working directory, so `node main.ts` behaves identically no matter where
- *   it is invoked from. Node's `fs` functions accept a `file:` URL directly,
- *   which is why the URL can be handed to `copyFileSync` as-is — no
- *   `fileURLToPath` conversion step is needed. Run with Node 22+.
+ * WHAT THIS SCRIPT DOES
+ *   Copies that committed PNG to the grader's output directory, byte for
+ *   byte. It uses only the Node standard library, never touches the network,
+ *   and writes identical bytes on every run. The destination is `/output`
+ *   in the grading container, or the directory named by `MAKEFUN_OUTPUT_DIR`
+ *   elsewhere. Run with Node 22+; paths resolve via `import.meta.url`, so
+ *   the working directory at invocation time does not matter.
  */
 
 import { copyFileSync } from "node:fs";
