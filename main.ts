@@ -2,24 +2,24 @@
  * daily-meridian-news — entrypoint for make.fun's news-image contest.
  *
  * THE PAGE
- *   `entry.png` is the front page of a one-day world newspaper for
- *   Wednesday 18 November 2026, printed on a warm cream sheet. Its stories
- *   sit in dark navy cards, numbered 1-40 and credited to their wires, and
- *   seven color-coded region bands — Asia, Americas, Europe, Africa, Middle
- *   East, World and Ukraine — sort the day's news by where it happened. A
- *   "day in numbers" strip runs beneath the masthead with the figures that
- *   define the date, from drones fired at Ukraine to Voyager 1's distance.
- *   Lower down, a two-column city list sweeps through the rest of the day,
- *   and a date-check footer notes the source, the cut-off and the rule that
- *   everything on the page happened on or was first reported that Wednesday.
+ *   `entry.png` is a cream newsprint broadsheet for Wednesday
+ *   18 November 2026 — one full day of world news set as a printed
+ *   front page. A red date tab anchored to the masthead stamps the
+ *   edition with that Wednesday, and the paper's 30 stories are filed
+ *   into four time bands that walk the day from overnight through
+ *   morning and afternoon to evening. A day-in-numbers strip sits
+ *   beneath the masthead with the figures that sized the date, the
+ *   top of the sheet is given over to the lead stories, a region grid
+ *   carries the wider globe, and evening briefs wind the day down
+ *   toward a sources footer crediting the wires behind every item.
  *
  * WHAT THIS SCRIPT DOES
- *   Copies that committed PNG to the grader's output directory, byte for
- *   byte. It uses only the Node standard library, never touches the network,
- *   and writes identical bytes on every run. The destination is `/output`
- *   in the grading container, or the directory named by `MAKEFUN_OUTPUT_DIR`
- *   elsewhere. Run with Node 22+; paths resolve via `import.meta.url`, so
- *   the working directory at invocation time does not matter.
+ *   Copies that committed PNG to the grader's output directory, byte
+ *   for byte. Standard library only, no network, and identical bytes
+ *   on every run. The destination is `/output` in the grading
+ *   container, or the directory named by `MAKEFUN_OUTPUT_DIR`
+ *   elsewhere. Run with Node 22+; paths resolve via
+ *   `import.meta.url`, so the working directory does not matter.
  */
 
 import { copyFileSync } from "node:fs";
