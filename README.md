@@ -1,10 +1,10 @@
-[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
-[![rank](https://make.fun/badge/news-image-20261117/signature15/daily-meridian-news/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
-[![reward](https://make.fun/badge/news-image-20261117/signature15/daily-meridian-news/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/signature15/daily-meridian-news/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/signature15/daily-meridian-news/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
 # daily-meridian-news
 
-An entry for make.fun's [news-image contest](https://make.fun/bounty/news-image-20261117): the
+An entry for make.fun's [news-image contest](https://make.fun/bounty/news-image-20261118): the
 world's news of Tuesday 17 November 2026, condensed into a single poster image.
 
 ## What it does
